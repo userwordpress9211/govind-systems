@@ -5,7 +5,11 @@ type Node = { id: string; x: number; y: number; group: string; size?: number };
 const nodes: Node[] = [
   { id: "WordPress", x: 50, y: 50, group: "core", size: 12 },
   { id: "PHP", x: 22, y: 30, group: "core", size: 9 },
+  { id: "Shopify", x: 80, y: 40, group: "core", size: 8 },
   { id: "Elementor", x: 78, y: 30, group: "core", size: 8 },
+  { id: "React", x: 65, y: 55, group: "fe", size: 9 },
+  { id: "Headless", x: 50, y: 15, group: "tool", size: 7 },
+  { id: "No-Code", x: 30, y: 18, group: "tool", size: 7 },
   { id: "HTML5", x: 12, y: 60, group: "fe", size: 7 },
   { id: "CSS3", x: 22, y: 78, group: "fe", size: 7 },
   { id: "JavaScript", x: 45, y: 88, group: "fe", size: 8 },
@@ -20,10 +24,12 @@ const nodes: Node[] = [
 
 const links: [string, string][] = [
   ["WordPress", "PHP"], ["WordPress", "Elementor"], ["WordPress", "MySQL"],
-  ["WordPress", "JavaScript"], ["WordPress", "CSS3"], ["WordPress", "HTML5"],
+  ["WordPress", "React"], ["WordPress", "Shopify"], ["WordPress", "Headless"],
+  ["React", "Headless"], ["React", "JavaScript"], ["Shopify", "PHP"],
+  ["Shopify", "Headless"], ["HTML5", "CSS3"], ["JavaScript", "jQuery"],
   ["WordPress", "CWV"], ["WordPress", "SEO"], ["WordPress", "Git"],
-  ["PHP", "MySQL"], ["JavaScript", "jQuery"], ["WordPress", "WP-CLI"],
-  ["WordPress", "cPanel"], ["HTML5", "CSS3"], ["PHP", "Git"],
+  ["PHP", "MySQL"], ["WordPress", "WP-CLI"], ["WordPress", "cPanel"],
+  ["No-Code", "Shopify"], ["No-Code", "Headless"],
 ];
 
 const groupColor: Record<string, string> = {
@@ -93,10 +99,10 @@ export const Stack = () => {
             <div className="space-y-3 mono text-xs">
               <div className="panel-label">// LEGEND</div>
               {[
-                { c: "hsl(var(--primary))", l: "CORE — WordPress, PHP, Elementor" },
-                { c: "hsl(var(--accent))", l: "FRONTEND — HTML, CSS, JS, jQuery" },
+                { c: "hsl(var(--primary))", l: "CORE — WordPress, PHP, Shopify" },
+                { c: "hsl(var(--accent))", l: "FRONTEND — React, HTML, CSS, JS" },
                 { c: "hsl(var(--secondary))", l: "DATA — MySQL" },
-                { c: "hsl(var(--muted-foreground))", l: "TOOLS — Git, cPanel, WP-CLI" },
+                { c: "hsl(var(--muted-foreground))", l: "TOOLS — Headless CMS, No-Code, Git" },
               ].map((it) => (
                 <div key={it.l} className="flex items-start gap-2">
                   <span className="h-2 w-2 mt-1.5 rounded-full shrink-0" style={{ background: it.c, boxShadow: `0 0 8px ${it.c}` }} />

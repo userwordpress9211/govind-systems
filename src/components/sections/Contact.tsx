@@ -1,6 +1,12 @@
 import { Mail, Phone, MapPin, Linkedin, Terminal, ArrowRight, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 
+const WhatsAppIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.28-1.38a9.86 9.86 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.13.82.84-3.05-.2-.31a8.24 8.24 0 1 1 6.98 3.86Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.07-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.76-1.84-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.24 3.75.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.16-.47-.29Z" />
+  </svg>
+);
+
 export const Contact = () => {
   const [cmd, setCmd] = useState("");
   const submit = (e: React.FormEvent) => {
@@ -24,7 +30,7 @@ export const Contact = () => {
             <span className="panel-label">// SECTION_06 :: TRANSMISSION</span>
           </div>
           <h2 className="mono text-3xl md:text-5xl font-bold glow-text-amber">INITIATE / CONTACT</h2>
-          <p className="text-muted-foreground mt-3 max-w-xl">Open a channel for engineering work, collaborations, or WordPress system audits.</p>
+          <p className="text-muted-foreground mt-3 max-w-xl">Open a channel for modern engineering work, Shopify commerce, headless CMS, no-code automation, or chat support.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -33,7 +39,7 @@ export const Contact = () => {
             <div className="panel-label mb-3">// CONTACT.TERMINAL</div>
             <div className="font-mono text-xs space-y-2 mb-5">
               <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> whoami</div>
-              <div className="text-foreground pl-4">Govind Kewat — WordPress Engineer</div>
+              <div className="text-foreground pl-4">Govind Kewat — React, Headless CMS & Shopify Engineer</div>
               <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> ping --status</div>
               <div className="text-secondary pl-4">● ONLINE :: accepting new transmissions</div>
             </div>
@@ -61,6 +67,7 @@ export const Contact = () => {
               {[
                 { Icon: Mail, label: "EMAIL", value: "govindkewat120@gmail.com", href: "mailto:govindkewat120@gmail.com" },
                 { Icon: Phone, label: "VOICE", value: "+91 8370044120", href: "tel:+918370044120" },
+                { Icon: WhatsAppIcon, label: "WHATSAPP", value: "+91 8370044120", href: "https://wa.me/918370044120?text=Hi%20Govind" },
                 { Icon: Linkedin, label: "LINKEDIN", value: "linkedin.com/in/govind-kewat", href: "https://linkedin.com/in/govind-kewat" },
                 { Icon: MapPin, label: "GEO", value: "Indore, Madhya Pradesh, IN", href: null as string | null },
               ].map(({ Icon, label, value, href }) => {
@@ -71,7 +78,7 @@ export const Contact = () => {
                       {...(href ? { href, target: href.startsWith("http") ? "_blank" : undefined, rel: "noreferrer" } : {})}
                       className="group flex items-center gap-3 px-3 py-2.5 border border-border hover:border-primary scan-effect transition-colors"
                     >
-                      <Icon className="h-4 w-4 text-primary shrink-0" />
+                      <Icon className={`h-4 w-4 shrink-0 ${label === "WHATSAPP" ? "text-emerald-400" : "text-primary"}`} />
                       <div className="flex-1 min-w-0">
                         <div className="panel-label">{label}</div>
                         <div className="mono text-xs text-foreground truncate group-hover:glow-text-amber transition-all">{value}</div>
@@ -89,6 +96,17 @@ export const Contact = () => {
           <div>© {new Date().getFullYear()} GOVIND.SYS // ALL SIGNALS RESERVED</div>
           <div className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" /> SYSTEM.STATUS :: NOMINAL</div>
         </footer>
+
+        <a
+          href="https://wa.me/918370044120?text=Hi%20Govind%2C%20I%20would%20like%20to%20talk%20about%20a%20project"
+          target="_blank"
+          rel="noreferrer"
+          className="fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-xs font-semibold uppercase text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all"
+          aria-label="Chat on WhatsApp"
+        >
+          <WhatsAppIcon className="h-5 w-5" />
+          WhatsApp
+        </a>
       </div>
     </section>
   );

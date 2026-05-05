@@ -15,8 +15,8 @@ const Index = () => {
 
   return (
     <>
-      <title>Govind Kewat — WordPress Developer & Performance Engineer</title>
-      <meta name="description" content="WordPress engineer with 4+ years building scalable, high-performance sites. Custom themes, plugins, Core Web Vitals, and API integrations." />
+      <title>Govind Kewat — React, Headless CMS & Shopify Engineer</title>
+      <meta name="description" content="React and Shopify developer with 5+ years building modern WordPress, headless CMS, no-code and commerce experiences. 25+ projects shipped with fast, performant frontends." />
       <link rel="canonical" href="/" />
 
       {!booted && <BootSequence onComplete={() => setBooted(true)} />}

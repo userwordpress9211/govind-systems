@@ -119,14 +119,14 @@ export const Hero = () => {
           <Teletype />
 
           <p className="text-base md:text-lg text-muted-foreground max-w-md leading-relaxed">
-            Building scalable WordPress systems with{" "}
-            <span className="text-foreground font-medium">performance-first architecture</span>.
+            Building modern WordPress, React, headless CMS, Shopify and no-code commerce experiences with
+            <span className="text-foreground font-medium"> performance-first delivery</span>.
           </p>
 
           <div className="grid grid-cols-3 gap-3 max-w-md">
             {[
-              { v: "4Y+", l: "EXP" },
-              { v: "10+", l: "PROJECTS" },
+              { v: "5Y+", l: "EXP" },
+              { v: "25+", l: "PROJECTS" },
               { v: "100", l: "CWV TARGET" },
             ].map((s) => (
               <div key={s.l} className="blueprint-frame p-3">
