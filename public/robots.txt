@@ -14,7 +14,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://govindkewat.dev/sitemap.xml
+Sitemap: https://govind-kewat.vercel.app/sitemap.xml
 
 
 User-agent: Twitterbot

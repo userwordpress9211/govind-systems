@@ -14,9 +14,9 @@ interface SEOProps {
 export const SEO = ({
   title,
   description,
-  canonical = "https://govindkewat.dev/",
+  canonical = "https://govind-kewat.vercel.app/",
   ogType = "website",
-  ogImage = "https://govindkewat.dev/og-image.png",
+  ogImage = "https://govind-kewat.vercel.app/og-image.png",
   keywords = "React developer, Shopify developer, headless CMS developer, WordPress developer",
   author = "Govind Kewat",
   structuredData,

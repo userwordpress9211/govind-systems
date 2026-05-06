@@ -38,7 +38,7 @@ const Index = () => {
       <SEO 
         title="Govind Kewat — React Developer, Shopify Expert & Headless CMS Specialist"
         description="React developer & Shopify expert with 5+ years building high-performance websites, headless CMS solutions, and e-commerce platforms. 25+ projects delivered with fast, performant frontends."
-        canonical="https://govindkewat.dev/"
+        canonical="https://govind-kewat.vercel.app/"
         keywords="React developer, Shopify developer, headless CMS, WordPress developer, React engineer, e-commerce developer, web performance engineer, frontend developer"
         structuredData={structuredData}
       />

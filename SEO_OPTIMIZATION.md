@@ -21,7 +21,7 @@
 - ✅ Added twitter:card type (summary_large_image)
 
 ### 3. **Canonical URLs**
-- ✅ Set canonical URLs with full domain (https://govindkewat.dev/)
+- ✅ Set canonical URLs with full domain (https://govind-kewat.vercel.app/)
 - ✅ Added hreflang tags for proper indexing
 - ✅ Prevents duplicate content issues
 
