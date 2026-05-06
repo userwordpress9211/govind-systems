@@ -101,11 +101,11 @@ export const Contact = () => {
           href="https://wa.me/918370044120?text=Hi%20Govind%2C%20I%20would%20like%20to%20talk%20about%20a%20project"
           target="_blank"
           rel="noreferrer"
-          className="fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-xs font-semibold uppercase text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all"
+          className="whatsapp-icon fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-xs font-semibold uppercase text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all"
           aria-label="Chat on WhatsApp"
         >
           <WhatsAppIcon className="h-5 w-5" />
-          WhatsApp
+      
         </a>
       </div>
     </section>
