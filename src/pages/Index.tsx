@@ -5,7 +5,6 @@ import { SideNav } from "@/components/SideNav";
 import { SEO } from "@/components/SEO";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
-import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Stack } from "@/components/sections/Stack";
 import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
@@ -55,7 +54,6 @@ const Index = () => {
           <main>
             <Hero />
             <Projects />
-            <BeforeAfter />
             <Stack />
             <Experience />
             <Education />
