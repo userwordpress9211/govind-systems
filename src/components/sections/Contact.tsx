@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const WhatsAppIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
-    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.28-1.38a9.86 9.86 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.13.82.84-3.05-.2-.31a8.24 8.24 0 1 1 6.98 3.86Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.07-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.76-1.84-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.24 3.75.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.16-.47-.29Z" />
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.28-1.38a9.86 9.86 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.08l-.3-.16-3.1.81.83-3.04-.2-.32a8.2 8.2 0 0 1 1.26-6.33c.7-1.04 1.62-1.97 2.7-2.7 1.08-.73 2.3-1.16 3.58-1.16 4.16 0 7.54 3.38 7.54 7.54 0 2.01-.8 3.9-2.25 5.32-1.45 1.42-3.4 2.2-5.29 2.2Z" />
   </svg>
 );
 
@@ -11,7 +11,7 @@ export const Contact = () => {
   const [cmd, setCmd] = useState("");
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = "mailto:govindkewat120@gmail.com";
+    window.location.href = "mailto:govindkewat019@gmail.com";
   };
 
   return (
@@ -38,7 +38,7 @@ export const Contact = () => {
           <div className="blueprint-frame bg-terminal scan-lines p-5">
             <div className="panel-label mb-3">// CONTACT.TERMINAL</div>
             <div className="font-mono text-xs space-y-2 mb-5">
-              <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> whoami</div>
+              <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> cat contact.txt</div>
               <div className="text-foreground pl-4">Govind Kewat — React, Headless CMS & Shopify Engineer</div>
               <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> ping --status</div>
               <div className="text-secondary pl-4">● ONLINE :: accepting new transmissions</div>
@@ -57,7 +57,7 @@ export const Contact = () => {
                 EXEC <ArrowRight className="h-3 w-3" />
               </button>
             </form>
-            <div className="mt-3 mono text-[10px] text-muted-foreground">↳ executes mailto://govindkewat120@gmail.com</div>
+            <div className="mt-3 mono text-[10px] text-muted-foreground">↳ executes mailto://govindkewat019@gmail.com</div>
           </div>
 
           {/* Channels */}
@@ -65,7 +65,7 @@ export const Contact = () => {
             <div className="panel-label mb-4">// OPEN.CHANNELS</div>
             <ul className="space-y-3">
               {[
-                { Icon: Mail, label: "EMAIL", value: "govindkewat120@gmail.com", href: "mailto:govindkewat120@gmail.com" },
+                { Icon: Mail, label: "EMAIL", value: "govindkewat019@gmail.com", href: "mailto:govindkewat019@gmail.com" },
                 { Icon: Phone, label: "VOICE", value: "+91 8370044120", href: "tel:+918370044120" },
                 { Icon: WhatsAppIcon, label: "WHATSAPP", value: "+91 8370044120", href: "https://wa.me/918370044120?text=Hi%20Govind" },
                 { Icon: Linkedin, label: "LINKEDIN", value: "linkedin.com/in/govind-kewat", href: "https://linkedin.com/in/govind-kewat" },
