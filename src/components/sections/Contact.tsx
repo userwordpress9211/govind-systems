@@ -11,7 +11,7 @@ export const Contact = () => {
   const [cmd, setCmd] = useState("");
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = "mailto:govindkewat019@gmail.com";
+    // Coming soon - contact form will be available soon
   };
 
   return (
@@ -20,8 +20,8 @@ export const Contact = () => {
         {/* Alert banner */}
         <div className="blueprint-frame bg-primary/5 border-primary/40 p-3 mb-8 flex items-center gap-3">
           <AlertTriangle className="h-4 w-4 text-primary animate-flicker shrink-0" />
-          <span className="mono text-xs text-primary uppercase tracking-wider">SYSTEM ALERT // OPEN.CHANNEL.REQUESTED</span>
-          <span className="ml-auto mono text-[10px] text-muted-foreground hidden md:block">PRIORITY: HIGH</span>
+          <span className="mono text-xs text-primary uppercase tracking-wider">SYSTEM ALERT // COMING SOON</span>
+          <span className="ml-auto mono text-[10px] text-muted-foreground hidden md:block">INITIALIZING</span>
         </div>
 
         <div className="mb-10">
@@ -30,7 +30,7 @@ export const Contact = () => {
             <span className="panel-label">// SECTION_06 :: TRANSMISSION</span>
           </div>
           <h2 className="mono text-3xl md:text-5xl font-bold glow-text-amber">INITIATE / CONTACT</h2>
-          <p className="text-muted-foreground mt-3 max-w-xl">Open a channel for modern engineering work, Shopify commerce, headless CMS, no-code automation, or chat support.</p>
+          <p className="text-muted-foreground mt-3 max-w-xl">Contact system coming soon. For professional inquiries, please connect via LinkedIn.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -38,26 +38,27 @@ export const Contact = () => {
           <div className="blueprint-frame bg-terminal scan-lines p-5">
             <div className="panel-label mb-3">// CONTACT.TERMINAL</div>
             <div className="font-mono text-xs space-y-2 mb-5">
-              <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> cat contact.txt</div>
+              <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span></div>
               <div className="text-foreground pl-4">Govind Kewat — React, Headless CMS & Shopify Engineer</div>
-              <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span> ping --status</div>
-              <div className="text-secondary pl-4">● ONLINE :: accepting new transmissions</div>
+              <div><span className="text-secondary">user@govind.sys</span><span className="text-muted-foreground">:</span><span className="text-accent">~</span><span className="text-muted-foreground">$</span></div>
+              <div className="text-secondary pl-4">● INITIALIZING :: contact system loading</div>
             </div>
 
-            <form onSubmit={submit} className="flex items-center gap-2 border border-primary/50 bg-background px-3 py-2.5 scan-effect">
+            <form onSubmit={submit} className="flex items-center gap-2 border border-primary/50 bg-background px-3 py-2.5 scan-effect opacity-50">
               <Terminal className="h-4 w-4 text-primary" />
               <span className="mono text-sm text-primary">$</span>
               <input
                 value={cmd}
                 onChange={(e) => setCmd(e.target.value)}
-                placeholder="Initialize Contact"
+                placeholder="Coming Soon"
+                disabled
                 className="flex-1 bg-transparent border-none outline-none mono text-sm text-foreground placeholder:text-muted-foreground"
               />
-              <button type="submit" className="flex items-center gap-1 mono text-[10px] bg-primary text-primary-foreground px-3 py-1.5 hover:shadow-glow-amber transition-shadow">
+              <button type="submit" disabled className="flex items-center gap-1 mono text-[10px] bg-primary text-primary-foreground px-3 py-1.5 opacity-50 cursor-not-allowed">
                 EXEC <ArrowRight className="h-3 w-3" />
               </button>
             </form>
-            <div className="mt-3 mono text-[10px] text-muted-foreground">↳ executes mailto://govindkewat019@gmail.com</div>
+            <div className="mt-3 mono text-[10px] text-muted-foreground">↳ contact form initializing...</div>
           </div>
 
           {/* Channels */}
@@ -65,9 +66,9 @@ export const Contact = () => {
             <div className="panel-label mb-4">// OPEN.CHANNELS</div>
             <ul className="space-y-3">
               {[
-                { Icon: Mail, label: "EMAIL", value: "govindkewat019@gmail.com", href: "mailto:govindkewat019@gmail.com" },
-                { Icon: Phone, label: "VOICE", value: "+91 8370044120", href: "tel:+918370044120" },
-                { Icon: WhatsAppIcon, label: "WHATSAPP", value: "+91 8370044120", href: "https://wa.me/918370044120?text=Hi%20Govind" },
+                { Icon: Mail, label: "EMAIL", value: "Coming Soon", href: null as string | null },
+                { Icon: Phone, label: "VOICE", value: "Coming Soon", href: null as string | null },
+                { Icon: WhatsAppIcon, label: "WHATSAPP", value: "Coming Soon", href: null as string | null },
                 { Icon: Linkedin, label: "LINKEDIN", value: "linkedin.com/in/govind-kewat", href: "https://linkedin.com/in/govind-kewat" },
                 { Icon: MapPin, label: "GEO", value: "Indore, Madhya Pradesh, IN", href: null as string | null },
               ].map(({ Icon, label, value, href }) => {
@@ -76,7 +77,7 @@ export const Contact = () => {
                   <li key={label}>
                     <Tag
                       {...(href ? { href, target: href.startsWith("http") ? "_blank" : undefined, rel: "noreferrer" } : {})}
-                      className="group flex items-center gap-3 px-3 py-2.5 border border-border hover:border-primary scan-effect transition-colors"
+                      className={`group flex items-center gap-3 px-3 py-2.5 border border-border ${href ? "hover:border-primary scan-effect transition-colors" : "opacity-60"}`}
                     >
                       <Icon className={`h-4 w-4 shrink-0 ${label === "WHATSAPP" ? "text-emerald-400" : "text-primary"}`} />
                       <div className="flex-1 min-w-0">
@@ -94,19 +95,8 @@ export const Contact = () => {
 
         <footer className="mt-12 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-3 mono text-[10px] text-muted-foreground">
           <div>© {new Date().getFullYear()} GOVIND.SYS // ALL SIGNALS RESERVED</div>
-          <div className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" /> SYSTEM.STATUS :: NOMINAL</div>
+          <div className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" /> SYSTEM.STATUS :: INITIALIZING</div>
         </footer>
-
-        <a
-          href="https://wa.me/918370044120?text=Hi%20Govind%2C%20I%20would%20like%20to%20talk%20about%20a%20project"
-          target="_blank"
-          rel="noreferrer"
-          className="whatsapp-icon fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-xs font-semibold uppercase text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all"
-          aria-label="Chat on WhatsApp"
-        >
-          <WhatsAppIcon className="h-5 w-5" />
-      
-        </a>
       </div>
     </section>
   );
