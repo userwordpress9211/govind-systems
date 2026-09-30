@@ -8,6 +8,7 @@ interface SEOProps {
   ogImage?: string;
   keywords?: string;
   author?: string;
+  siteName?: string;
   structuredData?: Record<string, unknown>;
 }
 
@@ -16,16 +17,15 @@ export const SEO = ({
   description,
   canonical = "https://govind-kewat.vercel.app/",
   ogType = "website",
-  ogImage = "https://govind-kewat.vercel.app/og-image.png",
-  keywords = "React developer, Shopify developer, headless CMS developer, WordPress developer",
+  ogImage = "https://govind-kewat.vercel.app/favicon.svg",
+  keywords = "Govind Kewat, React developer, Shopify developer, headless CMS developer, WordPress developer",
   author = "Govind Kewat",
+  siteName = "Govind Kewat",
   structuredData,
 }: SEOProps) => {
   useEffect(() => {
-    // Update title
     document.title = title;
 
-    // Update or create meta tags
     const updateMeta = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
@@ -46,24 +46,22 @@ export const SEO = ({
       meta.setAttribute("content", content);
     };
 
-    // Update core meta tags
     updateMeta("description", description);
     updateMeta("keywords", keywords);
     updateMeta("author", author);
+    updateMeta("application-name", siteName);
 
-    // Update Open Graph tags
     updateProperty("og:title", title);
     updateProperty("og:description", description);
     updateProperty("og:type", ogType);
     updateProperty("og:url", canonical);
     updateProperty("og:image", ogImage);
+    updateProperty("og:site_name", siteName);
 
-    // Update Twitter tags
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
     updateMeta("twitter:image", ogImage);
 
-    // Update canonical link
     let canonical_link = document.querySelector("link[rel='canonical']");
     if (!canonical_link) {
       canonical_link = document.createElement("link");
@@ -72,7 +70,6 @@ export const SEO = ({
     }
     canonical_link.setAttribute("href", canonical);
 
-    // Add structured data if provided
     if (structuredData) {
       let scriptTag = document.querySelector("script[type='application/ld+json'][data-type='page-schema']");
       if (scriptTag) {
@@ -84,7 +81,7 @@ export const SEO = ({
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
-  }, [title, description, canonical, ogType, ogImage, keywords, author, structuredData]);
+  }, [title, description, canonical, ogType, ogImage, keywords, author, siteName, structuredData]);
 
   return null;
 };
