@@ -4,10 +4,17 @@
   "description": "Full Stack Developer - WordPress, React, Shopify & Next.js",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#0b0f1a",
+  "theme_color": "#0b0f1a",
   "orientation": "portrait-primary",
-  "icons": [],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
   "categories": ["productivity", "business"],
   "screenshots": []
 }
